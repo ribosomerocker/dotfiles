@@ -1,0 +1,83 @@
+config:
+  backup: true
+  create: true
+  dotpath: dotfiles
+dotfiles:
+  d_alacritty:
+    src: config/alacritty
+    dst: ~/.config/alacritty
+  d_ansible:
+    src: config/ansible
+    dst: ~/.config/ansible
+  d_bspwm:
+    src: config/bspwm
+    dst: ~/.config/bspwm
+  f_init.el:
+    src: config/emacs/init.el
+    dst: ~/.config/emacs/init.el
+  d_dunst:
+    src: config/dunst
+    dst: ~/.config/dunst
+  d_fish:
+    src: config/fish
+    dst: ~/.config/fish
+  d_gtk-2.0:
+    src: config/gtk-2.0
+    dst: ~/.config/gtk-2.0
+    chmod: '700'
+  d_gtk-3.0:
+    src: config/gtk-3.0
+    dst: ~/.config/gtk-3.0
+  d_nvim:
+    src: config/nvim
+    dst: ~/.config/nvim
+  d_picom:
+    src: config/picom
+    dst: ~/.config/picom
+  d_pipewire:
+    src: config/pipewire
+    dst: ~/.config/pipewire
+    chmod: '700'
+  d_forest:
+    src: config/polybar/forest
+    dst: ~/.config/polybar/forest
+  d_rofi:
+    src: config/rofi
+    dst: ~/.config/rofi
+  d_sxhkd:
+    src: config/sxhkd
+    dst: ~/.config/sxhkd
+  d_tmux:
+    src: config/tmux
+    dst: ~/.config/tmux
+  d_x11:
+    src: config/X11
+    dst: ~/.config/X11
+  f_zshrc:
+    src: config/zsh/.zshrc
+    dst: ~/.config/zsh/.zshrc
+  f_user-dirs.dirs:
+    src: config/user-dirs.dirs
+    dst: ~/.config/user-dirs.dirs
+    chmod: '600'
+profiles:
+  artix-pc:
+    dotfiles:
+    - d_alacritty
+    - d_ansible
+    - d_bspwm
+    - f_init.el
+    - d_dunst
+    - d_fish
+    - d_gtk-2.0
+    - d_gtk-3.0
+    - d_nvim
+    - d_picom
+    - d_pipewire
+    - d_forest
+    - d_rofi
+    - d_sxhkd
+    - d_tmux
+    - d_x11
+    - f_zshrc
+    - f_user-dirs.dirs
