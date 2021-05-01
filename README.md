@@ -11,9 +11,15 @@ Don't use it for bad stuff though.
 # What I use
 
 Shell: ZSH
+
 WM: BSPWM + SXHKD
+
 Terminal Emulator: Alacritty
+
 Editor: Neovim
+
 Launcher: Rofi
+
 Terminal Multiplexer: TMUX
+
 Compositor: Picom
