@@ -7,3 +7,13 @@ For anything else, you can email me at mon.aaraj815\<at\>gmail.com
 
 You can do whatever you want from what you find here, it's public without a license for a reason.
 Don't use it for bad stuff though.
+
+# What I use
+
+Shell: ZSH
+WM: BSPWM + SXHKD
+Terminal Emulator: Alacritty
+Editor: Neovim
+Launcher: Rofi
+Terminal Multiplexer: TMUX
+Compositor: Picom
