@@ -51,6 +51,10 @@ PROMPT=$'[%F{yellow}%n@%F{magenta}%M %F{green}$(prompt_clean_pwd) %f]%F{cyan}%#%
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
