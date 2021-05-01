@@ -37,7 +37,7 @@ prompt_clean_pwd() {
     dirlist=(${(ps:/:)p})
     if [[ $num -ne 0 && ${#dirlist[@]} -gt $num ]]; then
         for q in ${dirlist:0:(-$num)}; do
-            printf "/${q:0:1}"
+            printf "/${q:0:2}"
         done
         for q in ${dirlist:(-$num)}; do
             printf "/$q"
