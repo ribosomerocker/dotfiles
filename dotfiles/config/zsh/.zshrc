@@ -86,6 +86,10 @@ export SXHKD_SHELL=/usr/bin/bash
 export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat
 export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+
+export PF_INFO="ascii title host os de wm shell editor pkgs palette"
+export PF_COL2=3
 
 if [ -s "${XDG_CONFIG_HOME}/ssh/config" ]
 then
