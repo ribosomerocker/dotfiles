@@ -60,6 +60,22 @@ dotfiles:
     src: config/user-dirs.dirs
     dst: ~/.config/user-dirs.dirs
     chmod: '600'
+  f_passmenu:
+    src: local/bin/passmenu
+    dst: ~/.local/bin/passmenu
+    chmod: '755'
+  f_remaps:
+    src: local/bin/remaps
+    dst: ~/.local/bin/remaps
+    chmod: '755'
+  f_setbg:
+    src: local/bin/setbg
+    dst: ~/.local/bin/setbg
+    chmod: '755'
+  f_title:
+    src: local/bin/title
+    dst: ~/.local/bin/title
+    chmod: '755'
 profiles:
   artix-pc:
     dotfiles:
@@ -81,3 +97,7 @@ profiles:
     - d_x11
     - f_zshrc
     - f_user-dirs.dirs
+    - f_passmenu
+    - f_remaps
+    - f_setbg
+    - f_title
