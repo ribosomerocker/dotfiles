@@ -91,6 +91,17 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 export PF_INFO="ascii title host os de wm shell editor pkgs palette"
 export PF_COL2=3
 
+if [ -s "${XDG_CONFIG_HOME}/ssh/config" ]
+then
+    SSH_CONFIG="-F ${XDG_CONFIG_HOME}/ssh/config"
+fi
+if [ -s "${XDG_DATA_HOME}/ssh/id_ed25519" ]
+then
+    SSH_ID="-i ${XDG_DATA_HOME}/ssh/id_ed25519"
+fi
+
+alias ssh="ssh $SSH_CONFIG $SSH_ID "
+alias ssh-copy-id="ssh-copy-id $SSH_ID"
 alias nv=nvim
 alias py=python3.9
 alias mkdir="mkdir -p"
@@ -105,7 +116,7 @@ alias wget="wget --continue --hsts-file=$HOME/.cache/wget-hsts"
 alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"
-alias ls="ls --color"
+alias ls="exa --color=auto --icons"
 alias dotdrop="/home/mon/Things/dotfiles/dotdrop.sh --cfg=/home/mon/Things/dotfiles/config.yaml"
 
 pfetch
