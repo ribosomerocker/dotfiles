@@ -7,9 +7,12 @@ require'lspconfig'.clangd.setup {
     root_dir = function() return vim.loop.cwd() end
 }
 
-require'lspconfig'.pyls.setup{ on_attach=on_attach }
-require'lspconfig'.gopls.setup{ on_attach=on_attach }
-require'lspconfig'.rust_analyzer.setup{ on_attach=on_attach }
-require'lspconfig'.ccls.setup{ on_attach=on_attach }
-require'lspconfig'.rls.setup{ on_attach=on_attach }
+-- Credit to Soviet Kitsune#3870 on Discord for this snippet
+local config = require 'lspconfig'
 
+local servers = { 'pyls', 'gopls', 'rust_analyser', 'ccls', 'rls' }
+
+for i = 1, #servers do
+  local server = servers[i]
+  config[server].setup { on_attach = on_attach }
+end
