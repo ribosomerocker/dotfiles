@@ -55,6 +55,7 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey '^[[Z' reverse-menu-complete
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -87,6 +88,8 @@ export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat
 export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 
 export PF_INFO="ascii title host os de wm shell editor pkgs palette"
 export PF_COL2=3
