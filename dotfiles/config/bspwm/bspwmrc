@@ -1,7 +1,7 @@
 #! /bin/sh
 
 ~/.config/dunst/reload &
-ibus-daemon &
+ibus-daemon -drx
 ~/.config/polybar/launch.sh --forest &
 picom --experimental-backends &
 copyq &
