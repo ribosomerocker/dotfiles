@@ -25,6 +25,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'Brettm12345/moonlight.vim'
 Plug 'lambdalisue/suda.vim'
 
 " -------------------------------------------------

@@ -5,5 +5,5 @@ endif
 
 highlight ColorColumn ctermbg=0 guibg=darkgrey
 
-colorscheme dracula
 set background=dark
+colorscheme dracula

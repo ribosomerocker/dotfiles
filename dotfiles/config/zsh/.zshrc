@@ -61,11 +61,11 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export PATH=$PATH:$HOME/.local/bin
-export XDG_CACHE_HOME=/home/mon/.local/cache
+export XDG_CACHE_HOME=$HOME/.local/cache
 export XDG_CONFIG_DIRS=/etc/xdg
-export XDG_CONFIG_HOME=/home/mon/.config
+export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
-export XDG_DATA_HOME=/home/mon/.local/share
+export XDG_DATA_HOME=$HOME/.local/share
 
 export XCOMPOSECACHE=$XDG_CACHE_HOME/X11/xcompose
 export XCOMPOSEFILE=$XDG_CONFIG_HOME/X11/xcompose
@@ -120,6 +120,6 @@ alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"
 alias ls="exa --color=auto --icons"
-alias dotdrop="/home/mon/Things/dotfiles/dotdrop.sh --cfg=/home/mon/Things/dotfiles/config.yaml"
+alias dotdrop="$HOME/Things/dotfiles/dotdrop.sh --cfg=$HOME/Things/dotfiles/config.yaml"
 
 pfetch
