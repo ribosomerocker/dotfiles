@@ -1,7 +1,7 @@
 # Dotfiles
 
 This repository is just a collection of dotfiles I deem are important either for me to restore or for people to take a gander at.
-This repository uses dotdrop as a dotfiles manager.
+This repository uses stow as a dotfiles manager.
 Got suggestions? [Make an issue](https://github.com/MonAaraj/dotfiles/issues).
 For anything else, you can email me at mon.aaraj815\<at\>gmail.com
 

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+capture () {
+    if [ "$#" -lt 2 ]; then
+        echo "Usage: capture varname command [arg ...]"
+        return 1
+    fi
+    typeset var captured; captured="$1"; shift
+    { read $captured <<<$( { { "$@" ; } 1>&3 ; } 2>&1); } 3>&1
+}

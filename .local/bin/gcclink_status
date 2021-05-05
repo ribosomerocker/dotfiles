@@ -1,0 +1,11 @@
+#!/bin/sh
+
+fullfile=$1
+
+filename=$(basename -- "$fullfile")
+filename="${filename%.*}"
+
+nasm -f elf32 $fullfile -o $filename.o
+gcc -m32 $filename.o -o $filename
+
+./$filename || echo "\nExit status: $?"

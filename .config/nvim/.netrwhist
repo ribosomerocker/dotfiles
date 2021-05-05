@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/mon/Projects/java/bla/src/main/java/com/example'
+let g:netrw_dirhist_2='/home/mon/Projects/java/bla/src/main/java/com'
+let g:netrw_dirhist_1='/home/mon/Projects/java/bla/src/main/java'
+let g:netrw_dirhist_0='/home/mon/Projects/java/bla/src/main'
+let g:netrw_dirhist_9='/home/mon/Projects/java/bla/src/main/java/com/example'
+let g:netrw_dirhist_8='/home/mon/Projects/java/bla/src/main/java/com'
+let g:netrw_dirhist_7='/home/mon/Projects/java/bla/src/main/java'
+let g:netrw_dirhist_6='/home/mon/Projects/java/bla/src/main'
+let g:netrw_dirhist_5='/home/mon/Projects/rust/rustychat/src'
+let g:netrw_dirhist_4='/home/mon/Projects/rust/rustychat'
