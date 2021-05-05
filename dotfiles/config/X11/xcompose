@@ -1,6 +1,0 @@
-include "%L"
-
-<Multi_key> <s> <h> : "ʃ"
-<Multi_key> <S> <H> : "Ʃ"
-<Multi_key> <o> <u> : "ȣ"
-<Multi_key> <O> <U> : "Ȣ"

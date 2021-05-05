@@ -1,9 +1,0 @@
-xsetroot -cursor_name left_ptr
-xrandr &&
-xrandr --output eDP1 --scale-from 1920x1080
-setbg &
-pipewire &
-xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/X11/xresources
-remaps &
-sxhkd &
-exec bspwm

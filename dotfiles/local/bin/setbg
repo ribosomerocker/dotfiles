@@ -1,7 +1,0 @@
-#!/bin/sh
-[ -f "$1" ] && cp "$1" ~/.config/wall.png && notify-send -i "$HOME/.config/wall.png" "Wallpaper changed"
-
-killall polybar
-setsid ~/.config/polybar/launch.sh --forest & >/dev/null &
-
-hsetroot -fill ~/.config/wall.png >/dev/null
