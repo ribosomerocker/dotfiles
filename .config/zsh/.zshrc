@@ -110,7 +110,6 @@ alias ssh-copy-id="ssh-copy-id $SSH_ID"
 alias nv=nvim
 alias py=python3.9
 alias mkdir="mkdir -p"
-alias cat="bat"
 alias imgcopy="xclip -sel clipboard -t image/png -i" # a paste version of this, especially on terminal, would just be useless tbh
 alias copy="xclip -sel clipboard -i"
 alias paste="xclip -sel clipboard -o"
@@ -121,7 +120,7 @@ alias wget="wget --continue --hsts-file=$HOME/.cache/wget-hsts"
 alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"
-alias ls="exa --color=auto --icons"
+alias ls="ls --color=auto"
 alias dotdrop="$HOME/Things/dotfiles/dotdrop.sh --cfg=$HOME/Things/dotfiles/config.yaml"
 
 pfetch
