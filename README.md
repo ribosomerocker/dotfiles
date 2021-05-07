@@ -1,3 +1,7 @@
+# Credits
+
+Credits to Soviet Kitsune#3870 on Discord for massively helping me with my Neovim Lua configuration.
+
 # Dotfiles
 
 This repository is just a collection of dotfiles I deem are important either for me to restore or for people to take a gander at.
