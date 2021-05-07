@@ -49,7 +49,8 @@ prompt_clean_pwd() {
 PROMPT=$'[%F{yellow}%n@%F{magenta}%M %F{green}$(prompt_clean_pwd) %f]%F{cyan}%#%f '
 
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Experimenting. might not really want syntax highlighting here.
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
@@ -90,6 +91,7 @@ export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export WINEPREFIX="$XDG_DATA_HOME/wine"
 
 export PF_INFO="ascii title host os de wm shell editor pkgs palette"
 export PF_COL2=3
