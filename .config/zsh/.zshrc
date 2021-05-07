@@ -126,5 +126,6 @@ alias la="ls -A"
 alias ll="ls -al"
 alias dotdrop="$HOME/Things/dotfiles/dotdrop.sh --cfg=$HOME/Things/dotfiles/config.yaml"
 alias config='/usr/bin/git -C $HOME/Git/dotfiles/'
+alias todo.sh='todo.sh -d $HOME/.config/todo/config'
 
 pfetch

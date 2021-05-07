@@ -17,6 +17,6 @@ local configs = {
   rls = default,
 }
 
-for server, config in pairs(configs) do
-   config[server].setup(config)
+for server, opts in pairs(configs) do
+   config[server].setup(opts)
 end

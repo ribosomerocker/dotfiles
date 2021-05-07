@@ -1,6 +1,7 @@
 ! Use a nice truetype font and size by default...
-xterm*faceName: Victoria Mono
+xterm*faceName: Victor Mono
 xterm*faceSize: 14
+xterm.termName:xterm-256color
 
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)
 xterm*loginshell: true
