@@ -1,3 +1,4 @@
 Xcursor.size: 10
 ! Dracula Xresources palette
-*.background: #1d1f21
+*.background: #666666
+*.foreground: #ffffff

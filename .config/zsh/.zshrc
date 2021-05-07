@@ -92,6 +92,7 @@ export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 export WINEPREFIX="$XDG_DATA_HOME/wine"
+export LS_COLORS="$(vivid generate molokai)"
 
 export PF_INFO="ascii title host os de wm shell editor pkgs palette"
 export PF_COL2=3
@@ -121,6 +122,8 @@ alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"
 alias ls="ls --color=auto"
+alias la="ls -A"
+alias ll="ls -al"
 alias dotdrop="$HOME/Things/dotfiles/dotdrop.sh --cfg=$HOME/Things/dotfiles/config.yaml"
 
 pfetch
