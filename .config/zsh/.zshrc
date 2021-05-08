@@ -9,6 +9,7 @@ compinit
 # Include hidden files
 zmodload zsh/complist
 # Menu selections
+zstyle ':completion:*' rehash true
 zstyle ':completion:*' menu yes select
 bindkey -M menuselect '?' history-incremental-search-forward
 
@@ -47,12 +48,12 @@ prompt_clean_pwd() {
     fi
 }
 PROMPT=$'[%F{yellow}%n@%F{magenta}%M %F{green}$(prompt_clean_pwd) %f]%F{cyan}%#%f '
+PS2=""
 
 
-# Experimenting. might not really want syntax highlighting here.
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
