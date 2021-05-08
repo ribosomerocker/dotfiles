@@ -133,4 +133,4 @@ ctrl + Print
     maim -suB | xclip -selection clipboard -t image/png
 
 shift + Print
-    maim -uBi (xdotool getactivewindow) | xclip -selection clipboard -t image/png
+    maim -uBi $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
