@@ -122,9 +122,9 @@ alias wget="wget --continue --hsts-file=$HOME/.cache/wget-hsts"
 alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"
-alias ls="lsd"
-alias la="lsd -A"
-alias ll="lsd -al"
+alias ls="exa --icons"
+alias la="exa --icons -a"
+alias ll="exa -al"
 alias dotdrop="$HOME/Things/dotfiles/dotdrop.sh --cfg=$HOME/Things/dotfiles/config.yaml"
 alias config='/usr/bin/git -C $HOME/Git/dotfiles/'
 alias todo.sh='todo.sh -d $HOME/.config/todo/config'
