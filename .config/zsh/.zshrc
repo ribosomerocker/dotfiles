@@ -47,17 +47,7 @@ prompt_clean_pwd() {
         printf "$p"
     fi
 }
-PROMPT=$'[%F{yellow}%n@%F{magenta}%M %F{green}$(prompt_clean_pwd) %f]%F{cyan}%#%f '
-PS2=""
-
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey '^[[Z' reverse-menu-complete
+PROMPT=$'%F{red}[%F{yellow}%n@%F{magenta}%M %F{green}$(prompt_clean_pwd) %F{red}]%F{cyan}%#%f '
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -124,10 +114,18 @@ alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"
 alias ls="exa --icons"
 alias la="exa --icons -a"
-alias ll="exa -al"
+alias ll="exa --icons -al"
 alias dotdrop="$HOME/Things/dotfiles/dotdrop.sh --cfg=$HOME/Things/dotfiles/config.yaml"
 alias config='/usr/bin/git -C $HOME/Git/dotfiles/'
 alias todo.sh='todo.sh -d $HOME/.config/todo/config'
 alias stowdotfiles='stow -vd $HOME/Git dotfiles'
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^[[Z' reverse-menu-complete
 
 pfetch
