@@ -184,10 +184,47 @@ font:
 
 # Colors (Tomorrow Night)
 colors:
-  # Default colors
   primary:
-    background: '#1c1b22'
-    foreground: '#dbdbdb'
+    background: '0x191622'
+    foreground: '0xe1e1e6'
+
+  cursor:
+    text: '0x191622'
+    cursor: '0xf8f8f2'
+
+  normal:
+    black: '0x000000'
+    red: '0xff5555'
+    green: '0x50fa7b'
+    yellow: '0xeffa78'
+    blue: '0xbd93f9'
+    magenta: '0xff79c6'
+    cyan: '0x8d79ba'
+    white: '0xbfbfbf'
+
+  bright:
+    black: '0x4d4d4d'
+    red: '0xff6e67'
+    green: '0x5af78e'
+    yellow: '0xeaf08d'
+    blue: '0xcaa9fa'
+    magenta: '0xff92d0'
+    cyan: '0xaa91e3'
+    white: '0xe6e6e6'
+
+  dim:
+    black: '0x000000'
+    red: '0xa90000'
+    green: '0x049f2b'
+    yellow: '0xa3b106'
+    blue: '0x530aba'
+    magenta: '0xbb006b'
+    cyan: '0x433364'
+    white: '0x5f5f5f'
+  # Default colors
+  #primary:
+  #  background: '#1d1f21'
+  #  foreground: '#c5c8c6'
 
     # Bright and dim foreground colors
     #
@@ -204,9 +241,10 @@ colors:
   #
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  cursor:
-    text: CellBackground
-    cursor: '#9d7de0'
+  #cursor:
+  #  text: CellBackground
+  #  cursor: CellForeground
+
   # Vi mode cursor colors
   #
   # Colors for the cursor when the vi mode is active.
@@ -255,26 +293,26 @@ colors:
   #  background: CellForeground
 
   # Normal colors
-  normal:
-    black:   '#161616'
-    red:     '#d46a6a'
-    green:   '#67c9a8'
-    yellow:  '#d8c56f'
-    blue:    '#67c9a8'
-    magenta: '#9d7de0'
-    cyan:    '#dbdbdb'
-    white:   '#dbdbdb'
+  #normal:
+  #  black:   '#1d1f21'
+  #  red:     '#cc6666'
+  #  green:   '#b5bd68'
+  #  yellow:  '#f0c674'
+  #  blue:    '#81a2be'
+  #  magenta: '#b294bb'
+  #  cyan:    '#8abeb7'
+  #  white:   '#c5c8c6'
 
   # Bright colors
-  bright:
-    black:   '#4d4d4d'
-    red:     '#d8c56f'
-    green:   '#9d7de0'
-    yellow:  '#d8c56f'
-    blue:    '#9d7de0'
-    magenta: '#9d7de0'
-    cyan:    '#67c9a8'
-    white:   '#dbdbdb'
+  #bright:
+  #  black:   '#666666'
+  #  red:     '#d54e53'
+  #  green:   '#b9ca4a'
+  #  yellow:  '#e7c547'
+  #  blue:    '#7aa6da'
+  #  magenta: '#c397d8'
+  #  cyan:    '#70c0b1'
+  #  white:   '#eaeaea'
 
   # Dim colors
   #
