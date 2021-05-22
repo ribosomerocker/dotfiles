@@ -86,7 +86,9 @@ export WINEPREFIX="$XDG_DATA_HOME/wine"
 export LS_COLORS="$(vivid generate molokai)"
 
 export PF_INFO="ascii title host os de wm shell editor pkgs palette"
-export PF_COL2=3
+export PF_COL2=2
+export PF_COL3=5
+export PF_COL1=3
 
 if [ -s "${XDG_CONFIG_HOME}/ssh/config" ]
 then
@@ -119,6 +121,8 @@ alias dotdrop="$HOME/Things/dotfiles/dotdrop.sh --cfg=$HOME/Things/dotfiles/conf
 alias config='/usr/bin/git -C $HOME/Git/dotfiles/'
 alias todo.sh='todo.sh -d $HOME/.config/todo/config'
 alias stowdotfiles='stow -vd $HOME/Git dotfiles'
+alias scheme="scheme --eehistory $XDG_CACHE_HOME/chez"
+alias petite="petite --eehistory $XDG_CACHE_HOME/chez"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh

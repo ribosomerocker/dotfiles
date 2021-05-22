@@ -27,6 +27,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'Brettm12345/moonlight.vim'
 Plug 'lambdalisue/suda.vim'
+Plug 'axvr/zepl.vim'
 
 " -------------------------------------------------
 " Debugger Plugins
@@ -72,6 +73,7 @@ let g:lightline = {
                   \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
                   \ }
 
+tnoremap <esc> <C-\><C-n>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>pv :Sex!<CR>
 nnoremap <Leader><CR> :so ~/.config/nvim/init.vim<CR>

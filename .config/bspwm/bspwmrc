@@ -3,8 +3,7 @@
 ~/.config/dunst/reload &
 killall ibus-daemon
 ibus-daemon -dx
-# should look for better bars, i have lemonbar and dzen2 on my mind right now.
-~/.config/polybar/launch.sh --forest &
+~/.config/polybar/launch.sh --panels &
 # picom --experimental-backends &
 copyq &
 

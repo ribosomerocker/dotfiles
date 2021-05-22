@@ -13,5 +13,6 @@
   "restore.stream.Input/Audio.application.name:winecfg.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Output/Audio.application.name:halo2.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:halo2.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
-  "restore.stream.Output/Audio.application.name:Halo 2 for Windows Vista": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] }
+  "restore.stream.Output/Audio.application.name:Halo 2 for Windows Vista": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Output/Audio.application.name:firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ] }
 }
