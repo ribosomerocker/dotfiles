@@ -5,8 +5,8 @@ include "/home/mon/.gtkrc-2.0.mine"
 gtk-theme-name="Arc-Dark"
 gtk-icon-theme-name="Papirus-Dark"
 gtk-font-name="Cantarell 11"
-gtk-cursor-theme-name="Breeze_Obsidian"
-gtk-cursor-theme-size=0
+gtk-cursor-theme-name="Vimix-cursors-white"
+gtk-cursor-theme-size=28
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
 gtk-button-images=1

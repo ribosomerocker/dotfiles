@@ -107,22 +107,38 @@ alias mkdir="mkdir -p"
 alias imgcopy="xclip -sel clipboard -t image/png -i" # a paste version of this, especially on terminal, would just be useless tbh
 alias copy="xclip -sel clipboard -i"
 alias paste="xclip -sel clipboard -o"
-alias gpg2="gpg2 --homedir \"$XDG_DATA_HOME/gnupg\""
 alias grep="rg"
 alias startx="startx $XINITRC -- vt1"
-alias wget="wget --continue --hsts-file=$HOME/.cache/wget-hsts"
 alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 alias irssi="irssi --config=$XDG_CONFIG_HOME/irssi/config --home=$XDG_DATA_HOME/irssi"
 alias ls="exa --icons"
 alias la="exa --icons -a"
 alias ll="exa --icons -al"
-alias dotdrop="$HOME/Things/dotfiles/dotdrop.sh --cfg=$HOME/Things/dotfiles/config.yaml"
 alias config='/usr/bin/git -C $HOME/Git/dotfiles/'
 alias todo.sh='todo.sh -d $HOME/.config/todo/config'
 alias stowdotfiles='stow -vd $HOME/Git dotfiles'
 alias scheme="scheme --eehistory $XDG_CACHE_HOME/chez"
 alias petite="petite --eehistory $XDG_CACHE_HOME/chez"
+
+########## FOLLOWING FUNCTIONS ARE DANGEROUS AND COULD AFFECT SCRIPTS YOU USE IN UNWANTED WAYS, PLEASE BE AWARE ##########
+# The reason I use this is for further XDG compliance, and for scripts/applications that use those commands to put the
+# Required files in a place that wouldn't clutter my home directory, these specific ones are only made functions
+# Because they're the most used in my environment in scripts/other applications, so they generate useless files in
+# Places they're not supposed to be in, I really dont recommend doing this if you don't have everything set up like me
+gpg2() {
+    /usr/bin/gpg2 --homedir "$XDG_DATA_HOME/gnupg" "$@"
+}
+
+wget() {
+    /usr/bin/wget --continue --hsts-file="$XDG_CACHE_HOME/wget-hsts" "$@"
+}
+
+monerod() {
+    /usr/bin/monerod --data-dir "$XDG_DATA_HOME"/bitmonero "$@"
+}
+
+##########                                          END OF DANGEROUS FUNCTIONS                                  ##########
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh

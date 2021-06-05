@@ -13,5 +13,8 @@ killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape'
 # Map the menu button to be right super as well.
 xmodmap -e 'keycode 135 = Super_R'
 
+# Map the right alt button from iso level 3 shift to right alt
+xmodmap -e 'keycode 92 = Alt_R'
+
 # Map PB (PauseBreak) to be dead_greek, useful for alpha and such
 xmodmap -e 'keycode 127 = dead_greek dead_greek dead_greek dead_greek'

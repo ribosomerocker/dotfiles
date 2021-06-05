@@ -1,4 +1,4 @@
-xsetroot -cursor_name left_ptr
+xsetroot -xcf /usr/share/icons/Vimix-cursors-white/cursors/left_ptr 28
 xrandr &&
 xrandr --output eDP1 --scale-from 1920x1080
 setbg &

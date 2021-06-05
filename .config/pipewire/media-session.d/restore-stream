@@ -1,12 +1,12 @@
 {
-  "restore.stream.Output/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Output/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 0.022081, 0.022081 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Output/Audio.media.role:Notification": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:cava": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Output/Audio.application.name:paplay": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:ncpamixer": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:PulseAudio Volume Control": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
-  "restore.stream.Output/Audio.application.name:mpv": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Output/Audio.application.name:mpv": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ] },
   "restore.stream.Output/Audio.application.name:virt-manager": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:virt-manager": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Output/Audio.application.name:winecfg.exe": { "volume": 1.000000, "mute": false },
@@ -14,5 +14,15 @@
   "restore.stream.Output/Audio.application.name:halo2.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:halo2.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Output/Audio.application.name:Halo 2 for Windows Vista": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
-  "restore.stream.Output/Audio.application.name:firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ] }
+  "restore.stream.Output/Audio.application.name:firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ] },
+  "restore.stream.Output/Audio.application.name:qtox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Input/Audio.application.name:qtox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Output/Audio.application.name:qutebrowser": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Audio/Sink.node.name:pulseeffects_sink": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Audio/Source/Virtual.node.name:pulseeffects_source": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Input/Audio.node.name:pulseeffects_soe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Output/Audio.node.name:pulseeffects_soe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "UNK", "UNK" ] },
+  "restore.stream.Audio/Sink.node.name:null": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Input/Audio.application.name:SoX": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Output/Audio.application.name:SoX": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] }
 }
