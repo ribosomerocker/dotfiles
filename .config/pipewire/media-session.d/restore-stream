@@ -6,7 +6,7 @@
   "restore.stream.Output/Audio.application.name:paplay": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:ncpamixer": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:PulseAudio Volume Control": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
-  "restore.stream.Output/Audio.application.name:mpv": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000 ], "channels": [ "MONO" ] },
+  "restore.stream.Output/Audio.application.name:mpv": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Output/Audio.application.name:virt-manager": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:virt-manager": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Output/Audio.application.name:winecfg.exe": { "volume": 1.000000, "mute": false },
@@ -24,5 +24,8 @@
   "restore.stream.Output/Audio.node.name:pulseeffects_soe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "UNK", "UNK" ] },
   "restore.stream.Audio/Sink.node.name:null": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
   "restore.stream.Input/Audio.application.name:SoX": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
-  "restore.stream.Output/Audio.application.name:SoX": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] }
+  "restore.stream.Output/Audio.application.name:SoX": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Output/Audio.media.role:Movie": { "volume": 1.000000, "mute": false, "volumes": [ 0.749985, 0.749985 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Audio/Sink.node.name:alsa_output.pci-0000_00_1b.0.analog-stereo": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+  "restore.stream.Audio/Source.node.name:alsa_input.pci-0000_00_1b.0.analog-stereo": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ] }
 }
