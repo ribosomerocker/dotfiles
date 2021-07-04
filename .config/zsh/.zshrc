@@ -120,6 +120,7 @@ alias todo.sh='todo.sh -d $HOME/.config/todo/config'
 alias stowdotfiles='stow -vd $HOME/Git dotfiles'
 alias scheme="scheme --eehistory $XDG_CACHE_HOME/chez"
 alias petite="petite --eehistory $XDG_CACHE_HOME/chez"
+alias cat="bat"
 
 ########## FOLLOWING FUNCTIONS ARE DANGEROUS AND COULD AFFECT SCRIPTS YOU USE IN UNWANTED WAYS, PLEASE BE AWARE ##########
 # The reason I use this is for further XDG compliance, and for scripts/applications that use those commands to put the
