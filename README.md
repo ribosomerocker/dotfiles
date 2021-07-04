@@ -45,4 +45,4 @@ Launcher: Rofi
 
 Terminal Multiplexer: TMUX
 
-Compositor: Picom
+Compositor: None anymore, but I used to use Picom. Warning though, I use the `next` branch of Picom, and to do that I specifically had to compile it myself. Some of the features I use might not work with it.

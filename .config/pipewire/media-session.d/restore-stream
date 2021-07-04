@@ -1,5 +1,5 @@
 {
- "restore.stream.Output/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 0.334300, 0.334300 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 0.022081, 0.022081 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Output/Audio.media.role:Notification": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Input/Audio.application.name:cava": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Input/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
@@ -9,7 +9,7 @@
  "restore.stream.Output/Audio.application.name:mpv": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Output/Audio.application.name:virt-manager": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Input/Audio.application.name:virt-manager": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
- "restore.stream.Output/Audio.application.name:winecfg.exe": { "volume": 1.000000, "mute": false },
+ "restore.stream.Output/Audio.application.name:winecfg.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Input/Audio.application.name:winecfg.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Output/Audio.application.name:halo2.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Input/Audio.application.name:halo2.exe": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
