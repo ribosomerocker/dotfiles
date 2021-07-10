@@ -11,7 +11,7 @@ super + d
     rofi -show run
 
 super + shift + d
-    passmenu
+    rofi-pass
 
 # make sxhkd reload its configuration files:
 super + Escape

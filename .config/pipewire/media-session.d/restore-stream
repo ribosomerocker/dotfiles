@@ -1,5 +1,5 @@
 {
- "restore.stream.Output/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Output/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 0.042586, 0.042586 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Output/Audio.media.role:Notification": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Input/Audio.application.name:cava": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Input/Audio.application.name:Firefox": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
@@ -26,7 +26,7 @@
  "restore.stream.Input/Audio.application.name:SoX": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Output/Audio.application.name:SoX": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Output/Audio.media.role:Movie": { "volume": 1.000000, "mute": false, "volumes": [ 0.749985, 0.749985 ], "channels": [ "FL", "FR" ] },
- "restore.stream.Audio/Sink.node.name:alsa_output.pci-0000_00_1b.0.analog-stereo": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
+ "restore.stream.Audio/Sink.node.name:alsa_output.pci-0000_00_1b.0.analog-stereo": { "volume": 1.000000, "mute": true, "volumes": [ 0.000141, 0.000141 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Audio/Source.node.name:alsa_input.pci-0000_00_1b.0.analog-stereo": { "volume": 1.000000, "mute": false, "volumes": [ 0.015849, 0.015849 ] },
  "restore.stream.Output/Audio.application.name:RetroArch": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },
  "restore.stream.Input/Audio.application.name:parec": { "volume": 1.000000, "mute": false, "volumes": [ 1.000000, 1.000000 ], "channels": [ "FL", "FR" ] },

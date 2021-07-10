@@ -1,0 +1,12 @@
+xsetroot -xcf /usr/share/icons/Vimix-cursors-white/cursors/left_ptr 28
+xrandr &&
+xrandr --output eDP1 --scale-from 1920x1080
+setbg &
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/pipewire-media-session &
+xrdb "${XDG_CONFIG_HOME:-$HOME/.config}"/X11/xresources &
+remaps &
+cleanup &
+sxhkd &
+exec bspwm
