@@ -90,6 +90,11 @@ export PF_COL2=2
 export PF_COL3=5
 export PF_COL1=3
 
+export XKB_DEFAULT_MODEL=pc105
+export XKB_DEFAULT_LAYOUT=us,us,ar
+export XKB_DEFAULT_VARIANT=,colemak_dh,
+export XKB_DEFAULT_OPTIONS=grp:win_space_toggle,caps:super,compose:sclk,shift:both_capslock,altwin:menu_win
+
 if [ -s "${XDG_CONFIG_HOME}/ssh/config" ]
 then
     SSH_CONFIG="-F ${XDG_CONFIG_HOME}/ssh/config"

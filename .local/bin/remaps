@@ -4,14 +4,11 @@
 # Increase key speed via a rate change
 xset r rate 300 50
 
-# Map capslock key to super
-setxkbmap -model pc105 -layout us,us,ar -variant ,colemak_dh, -option grp:win_space_toggle,caps:super,compose:sclk,shift:both_capslock
+# Map capslock key to super, along with other stuff
+setxkbmap -model pc105 -layout us,us,ar -variant ,colemak_dh, -option grp:win_space_toggle,caps:super,compose:sclk,shift:both_capslock,altwin:menu_win
 
 # but when pressed only once, treat it as escape
 killall xcape 2>/dev/null ; xcape -e 'Super_L=Escape'
-
-# Map the menu button to be right super as well.
-xmodmap -e 'keycode 135 = Super_R'
 
 # Map PB (PauseBreak) to be dead_greek, useful for alpha and such
 xmodmap -e 'keycode 127 = dead_greek dead_greek dead_greek dead_greek'
