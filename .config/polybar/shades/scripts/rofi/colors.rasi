@@ -3,9 +3,9 @@
 * {
   al:    #00000000;
   bg:    #1F1F1FFF;
-  bg1:   #1565C0FF;
-  bg2:   #1976D2FF;
-  bg3:   #1E88E5FF;
-  bg4:   #2196F3FF;
+  bg1:   #AD1457FF;
+  bg2:   #C2185BFF;
+  bg3:   #D81B60FF;
+  bg4:   #E91E63FF;
   fg:    #FFFFFFFF;
 }

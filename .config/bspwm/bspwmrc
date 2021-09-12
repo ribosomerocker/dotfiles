@@ -3,7 +3,7 @@
 ~/.config/dunst/reload &
 killall ibus-daemon
 ibus-daemon -dx
-~/.config/polybar/launch.sh --panels &
+~/.config/polybar/launch.sh --shades &
 # picom --experimental-backends &
 copyq &
 

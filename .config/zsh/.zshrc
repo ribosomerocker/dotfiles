@@ -47,12 +47,12 @@ prompt_clean_pwd() {
         printf "$p"
     fi
 }
-PROMPT=$'%F{red}[%F{yellow}%n@%F{magenta}%M %F{green}$(prompt_clean_pwd) %F{red}]%F{cyan}%#%f '
+PROMPT=$'%F{green}$(prompt_clean_pwd):%F{yellow}%n%F{cyan}%#%f '
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.local/lib/go/bin
 export XDG_CACHE_HOME=$HOME/.local/cache
 export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CONFIG_HOME=$HOME/.config
@@ -69,6 +69,7 @@ export EDITOR=nvim
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
 export ADB_KEYS_PATH=$XDG_DATA_HOME/android
 export CARGO_HOME=$XDG_DATA_HOME/cargo
+export GOPATH=$XDG_DATA_HOME/go
 
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0
 export LESSHISTFILE=$XDG_CACHE_HOME/less/history
@@ -93,7 +94,7 @@ export PF_COL1=3
 export XKB_DEFAULT_MODEL=pc105
 export XKB_DEFAULT_LAYOUT=us,us,ar
 export XKB_DEFAULT_VARIANT=,colemak_dh,
-export XKB_DEFAULT_OPTIONS=grp:win_space_toggle,caps:super,compose:sclk,shift:both_capslock,altwin:menu_win
+export XKB_DEFAULT_OPTIONS=grp:win_space_toggle,compose:sclk,shift:both_capslock,altwin:menu_win
 
 if [ -s "${XDG_CONFIG_HOME}/ssh/config" ]
 then

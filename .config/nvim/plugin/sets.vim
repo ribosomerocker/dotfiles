@@ -12,14 +12,13 @@ set nobackup
 set undodir=/home/mon/.local/share/nvim/undodir
 set undofile
 set incsearch
-set termguicolors
 set scrolloff=8
 set noshowmode
 set showmatch
 set clipboard+=unnamedplus
 set signcolumn=yes
 
-" Give more space for displaying messages.
+" Message display
 set cmdheight=1
 
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
@@ -44,3 +43,5 @@ set wildignore+=**/node_modules/*
 set wildignore+=**/android/*
 set wildignore+=**/ios/*
 set wildignore+=**/.git/*
+
+let &fcs='eob: '

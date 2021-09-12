@@ -10,6 +10,8 @@ application/xhtml+xml=firefox.desktop
 application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
+x-scheme-handler/discord-610508934456934412=discord-610508934456934412.desktop
+x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;
