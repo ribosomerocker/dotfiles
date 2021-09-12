@@ -47,7 +47,7 @@ prompt_clean_pwd() {
         printf "$p"
     fi
 }
-PROMPT=$'%F{green}$(prompt_clean_pwd):%F{yellow}%n%F{cyan}%#%f '
+PROMPT=$'%F{green}$(prompt_clean_pwd)%F{white}:%F{yellow}%n%F{cyan}%#%f '
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
