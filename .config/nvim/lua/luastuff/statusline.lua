@@ -210,21 +210,6 @@ local comps = {
     }
 }
 
-local properties = {
-    force_inactive = {
-        filetypes = {
-            'NvimTree',
-            'dbui',
-            'packer',
-            'startify',
-            'fugitive',
-            'fugitiveblame'
-        },
-        buftypes = {'terminal'},
-        bufnames = {}
-    }
-}
-
 -- local components = {
 --     left = {
 --         active = {
@@ -292,10 +277,29 @@ local components = {
 
 -- LuaFormatter on
 
-require'feline'.setup {
-    default_bg = colors.bg,
-    default_fg = colors.fg,
+require('feline').setup({
+    colors = {
+        bg = colors.bg,
+        fd = colors.fg
+    },
     components = components,
     properties = properties,
-    vi_mode_colors = vi_mode_colors
-}
+    vi_mode_colors = vi_mode_colors,
+    force_inactive = {
+        filetypes = {
+            'NvimTree',
+            'dbui',
+            'packer',
+            'startify',
+            'fugitive',
+            'fugitiveblame'
+        },
+        buftypes = {'terminal'},
+        bufnames = {}
+    },
+    disable = {
+        filetypes = {
+            'NvimTree'
+        }
+    }
+})

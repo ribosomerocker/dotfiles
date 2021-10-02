@@ -1,5 +1,5 @@
-Xcursor.theme: Vimix-cursors-white
-Xcursor.size: 28
+Xcursor.theme: Paper
+Xcursor.size: 32
 
 *.foreground:   #cbe3e7
 *.background:   #1e1c31

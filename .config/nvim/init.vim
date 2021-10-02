@@ -1,17 +1,18 @@
 call plug#begin(stdpath('data') . '/plugged')
 
-" lsp Plugins
 Plug 'neovim/nvim-lspconfig'
 
-" nvim-cmp is the successor to nvim-compe, and also the dependencies right
-" after
+" lsp completion
 Plug 'hrsh7th/nvim-cmp'
+
+" cmp dependencies
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-buffer'
 
 " lspkind for cmp completion info
 Plug 'onsails/lspkind-nvim'
+
 " nvim-autopairs for automatic pair handling
 Plug 'windwp/nvim-autopairs'
 
@@ -21,21 +22,15 @@ Plug 'saadparwaiz1/cmp_luasnip'
 
 " nice lookin' QOL stuff
 Plug 'akinsho/bufferline.nvim'
-Plug 'famiu/bufdelete.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'famiu/feline.nvim'
+Plug 'famiu/feline.nvim', { 'branch': 'develop' }
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'andweeb/presence.nvim'
 
 " Neovim Tree shitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" Plug 'itchyny/lightline.vim'
 Plug 'mbbill/undotree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-dispatch'
-
 
 " -------------------------------------------------
 
@@ -47,13 +42,11 @@ Plug 'junegunn/gv.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 " Colors
 Plug 'sheerun/vim-polyglot'
-Plug 'ghifarit53/tokyonight-vim'
-Plug 'pineapplegiant/spaceduck'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 call plug#end()
@@ -76,6 +69,9 @@ let g:presence_plugin_manager_text = "Managing plugins"
 let g:presence_reading_text        = "Reading %s"
 let g:presence_workspace_text      = "Working on %s"
 let g:presence_line_number_text    = "Line %s out of %s"
+
+let g:nvim_tree_width = 20
+let g:nvim_tree_highlight_opened_files = 3
 
 set guifont=Victor\ Mono,FontAwesome:h20
 
@@ -117,24 +113,43 @@ let mapleader = " "
 lua <<EOF
 require('bufferline').setup {
   options = {
-    max_name_length = 18,
+    max_name_length = 16,
+    buffer_close_icon = "",
+    modified_icon = "",
+    close_icon = "",
+    show_close_icon = true,
+    left_trunc_marker = "",
+    right_trunc_marker = "",
     max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
-    tab_size = 18,
+    tab_size = 20,
     diagnostics = "nvim_lsp",
     diagnostics_update_in_insert = false,
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
       return "("..count..")"
     end,
     -- NOTE: this will be called a lot so don't do any heavy processing here
-    offsets = {{filetype = "NvimTree", text = "", text_align = "center"}},
+    offsets = {{filetype = "NvimTree", text = "", padding = 1}},
     show_buffer_icons = true,
-    show_buffer_close_icons = false,
+    show_buffer_close_icons = true,
     show_close_icon = true ,
     show_tab_indicators = true,
     persist_buffer_sort = true, -- whether or not custom sorted buffers should persist
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
-    }
+    seperator_style = "thin",
+    },
+    fill = {
+         guifg = "#767676",
+         guibg = "#212121",
+     },
+    close_button_selected = {
+         guifg = "#ff8080",
+         guibg = "#212121",
+      },
+    tab_close = {
+         guifg = "#ff8080",
+         guibg = "#212121",
+      },
 }
 
 require("indent_blankline").setup {
@@ -151,7 +166,7 @@ nnoremap <silent>mh :BufferLineCyclePrev<CR>
 " These commands will move the current buffer backwards or forwards in the bufferline
 nnoremap <silent>Ml :BufferLineMoveNext<CR>
 nnoremap <silent>Mh :BufferLineMovePrev<CR>
-nnoremap <silent>md :Bdelete!<CR>
+nnoremap <silent>md :bdelete!<CR>
 
 " These commands will sort buffers by directory and language
 nnoremap <silent>mx :BufferLineSortByExtension<CR>

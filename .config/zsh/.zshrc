@@ -52,12 +52,12 @@ PROMPT=$'%F{green}$(prompt_clean_pwd)%F{white}:%F{yellow}%n%F{cyan}%#%f '
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-export PATH=$PATH:$HOME/.local/bin:$HOME/.local/lib/go/bin
 export XDG_CACHE_HOME=$HOME/.local/cache
 export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_DATA_HOME=$HOME/.local/share
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/lib/go/bin:$XDG_DATA_HOME/opam/4.12.0/bin"
 
 export XCOMPOSECACHE=$XDG_CACHE_HOME/X11/xcompose
 export XCOMPOSEFILE=$XDG_CONFIG_HOME/X11/xcompose
@@ -80,9 +80,9 @@ export SXHKD_SHELL=/usr/bin/bash
 export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat
 export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
-export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
-export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
+export IPYTHONDIR="$XDG_CONFIG_HOME/jupyter"
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export WINEPREFIX="$XDG_DATA_HOME/wine"
 export LS_COLORS="$(vivid generate molokai)"
 
@@ -95,6 +95,12 @@ export XKB_DEFAULT_MODEL=pc105
 export XKB_DEFAULT_LAYOUT=us,us,ar
 export XKB_DEFAULT_VARIANT=,colemak_dh,
 export XKB_DEFAULT_OPTIONS=grp:win_space_toggle,compose:sclk,shift:both_capslock,altwin:menu_win
+export FASD_DATA="$XDG_DATA_HOME/fasd"
+export OPAMROOT="$XDG_DATA_HOME/opam"
+export CAML_LD_LIBRARY_PATH="$XDG_DATA_HOME/opam/4.12.0/lib/stublibs:/usr/lib/ocaml/stublibs:/usr/lib/ocaml"
+export OCAML_TOPLEVEL_PATH="$XDG_DATA_HOME/opam/4.12.0/lib/toplevel"
+export MANPATH=":$XDG_DATA_HOME/opam/4.12.0/man:/home/mon/.opam/4.12.0/man"
+export INPUTRC="$XDG_CONFIG_HOME/inputrc"
 
 if [ -s "${XDG_CONFIG_HOME}/ssh/config" ]
 then
@@ -104,6 +110,8 @@ if [ -s "${XDG_DATA_HOME}/ssh/id_ed25519" ]
 then
     SSH_ID="-i ${XDG_DATA_HOME}/ssh/id_ed25519"
 fi
+
+eval "$(fasd --init auto)"
 
 alias ssh="ssh $SSH_CONFIG $SSH_ID "
 alias ssh-copy-id="ssh-copy-id $SSH_ID"
@@ -127,25 +135,8 @@ alias stowdotfiles='stow -vd $HOME/Git dotfiles'
 alias scheme="scheme --eehistory $XDG_CACHE_HOME/chez"
 alias petite="petite --eehistory $XDG_CACHE_HOME/chez"
 alias cat="bat"
-
-########## FOLLOWING FUNCTIONS ARE DANGEROUS AND COULD AFFECT SCRIPTS YOU USE IN UNWANTED WAYS, PLEASE BE AWARE ##########
-# The reason I use this is for further XDG compliance, and for scripts/applications that use those commands to put the
-# Required files in a place that wouldn't clutter my home directory, these specific ones are only made functions
-# Because they're the most used in my environment in scripts/other applications, so they generate useless files in
-# Places they're not supposed to be in, I really dont recommend doing this if you don't have everything set up like me
-gpg2() {
-    /usr/bin/gpg2 --homedir "$XDG_DATA_HOME/gnupg" "$@"
-}
-
-wget() {
-    /usr/bin/wget --continue --hsts-file="$XDG_CACHE_HOME/wget-hsts" "$@"
-}
-
-monerod() {
-    /usr/bin/monerod --data-dir "$XDG_DATA_HOME"/bitmonero "$@"
-}
-
-##########                                          END OF DANGEROUS FUNCTIONS                                  ##########
+alias e='f -e nvim'
+alias ea='f -e editas'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
