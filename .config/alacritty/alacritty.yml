@@ -1,5 +1,5 @@
 background_opacity: 1
-colors:
+#colors:
   #  bright:
   #    black: '#100e23'
   #    blue: '#65b2ff'
@@ -24,33 +24,33 @@ colors:
   # Default colors
 colors:
   bright:
-    black: '#434b53'
-    blue: '#1bbcdd'
-    cyan: '#87acb4'
-    green: '#628d98'
-    magenta: '#bbe3ee'
-    red: '#d48678'
-    white: '#fee4ce'
-    yellow: '#fdd39f'
+    black: '#4d4d4d'
+    blue: '#6ca4f8'
+    cyan: '#2b7489'
+    green: '#56d364'
+    magenta: '#db61a2'
+    red: '#f78166'
+    white: '#ffffff'
+    yellow: '#e3b341'
   cursor:
-    cursor: '#fca02f'
-    text: '#08131a'
+    cursor: '#c9d1d9'
+    text: '#ffffff'
   normal:
-    black: '#17384c'
-    blue: '#1e4950'
-    cyan: '#50a3b5'
-    green: '#027c9b'
-    magenta: '#68d4f1'
-    red: '#d15123'
-    white: '#deb88d'
-    yellow: '#fca02f'
+    black: '#000000'
+    blue: '#6ca4f8'
+    cyan: '#2b7489'
+    green: '#56d364'
+    magenta: '#db61a2'
+    red: '#f78166'
+    white: '#ffffff'
+    yellow: '#e3b341'
   primary:
-    background: '#09141b'
-    foreground: '#deb88d'
+    background: '#101216'
+    foreground: '#8b949e'
   selection:
-    background: '#1e4962'
-    text: '#fee4ce'
+    background: '#3b5070'
+    text: '#ffffff'
 font:
   normal:
-    family: Victor Mono
+    family: VictorMono Nerd Font
   size: 11.0
