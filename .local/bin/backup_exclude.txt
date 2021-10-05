@@ -1,0 +1,23 @@
+# Not old backups
+/opt/backup
+
+# Not temporary files
+/tmp/*
+
+# Not the cache for pacman
+/var/cache/pacman/pkg
+
+# Not virtual filesystems/mounts
+/proc
+/mnt
+/dev
+/sys
+/run
+/media
+
+# No logs, gvfs, cache, trash, etc
+/var/log
+/home/*/.gvfs
+/home/*/.local/cache
+/home/*/.local/share/Trash
+/home/lost+found
