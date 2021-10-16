@@ -1,7 +1,4 @@
-Host git@github.com
-    IdentityFile ~/.local/share/ssh/id_ed25519
-    UserKnownHostsFile ~/.local/share/ssh/known_hosts
-
 Host *
     IdentityFile ~/.local/share/ssh/id_ed25519
+    AddKeysToAgent yes
     UserKnownHostsFile ~/.local/share/ssh/known_hosts
