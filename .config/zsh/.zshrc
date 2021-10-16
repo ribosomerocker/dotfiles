@@ -117,7 +117,7 @@ eval "$(ssh-agent)" 1>/dev/null
 
 eval "$(fasd --init auto)"
 
-alias ssh="ssh $SSH_CONFIG $SSH_ID "
+alias ssh="ssh $SSH_CONFIG $SSH_ID"
 alias ssh-copy-id="ssh-copy-id $SSH_ID"
 alias nv=nvim
 alias py=python3.9
