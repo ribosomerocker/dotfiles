@@ -1,3 +1,2 @@
-Host *
-    IdentityFile /home/mon/.local/share/ssh/id_ed25519
-    UserKnownHostsFile /home/mon/.local/share/ssh/known_hosts
+IdentityFile /home/mon/.local/share/ssh/id_ed25519
+UserKnownHostsFile /home/mon/.local/share/ssh/known_hosts
