@@ -1,6 +1,7 @@
 local opt = vim.opt
 
-opt.guifont              =  "VictorMono Nerd Font Mono:h20, FontAwesome:h20"
+-- opt.guifont              =  "VictorMono Nerd Font Mono:h18, FontAwesome:h18"
+opt.guifont              =  "VictorMono Nerd Font Mono:h18"
 opt.hlsearch             =  false
 opt.hidden               =  true
 opt.errorbells           =  false
@@ -23,7 +24,6 @@ opt.clipboard:append     "unnamedplus"
 opt.signcolumn           =  "yes"
 opt.termguicolors        =  true
 opt.completeopt          = {"menuone", "noselect"}
-
 
 -- message height
 opt.cmdheight            =  1
@@ -49,4 +49,4 @@ opt.wildignore:append {
     "**/.git/*",
 }
 
-opt.fillchars           =  "eob:|"
+opt.fillchars           =  { eob = " ", vert = "▎" }

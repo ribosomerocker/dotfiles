@@ -131,3 +131,14 @@ ctrl + Print
 
 shift + Print
     maim -uBi $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+
+super + q 
+    boomer
+
+# wired config
+
+super + m 
+	wired --drop latest 
+
+super + n 
+    wired --show 1

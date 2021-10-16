@@ -1,6 +1,8 @@
-#! /bin/sh
+#!/bin/sh
 
-~/.config/dunst/reload &
+killall wired
+wired -r &
+
 killall ibus-daemon
 ibus-daemon -dx
 ~/.config/polybar/launch.sh --shades &

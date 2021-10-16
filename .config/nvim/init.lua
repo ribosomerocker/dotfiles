@@ -32,7 +32,8 @@ require'nvim-tree'.setup {
     }
 }
 
--- Bufferline, feline and indent-blackline setup here
+
+-- Bufferline, feline and indent_blankline setup here
 require 'bufferline'.setup {
   options = {
     max_name_length = 16,
@@ -44,13 +45,15 @@ require 'bufferline'.setup {
     right_trunc_marker = "",
     max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
     tab_size = 20,
+    enforce_regular_tabs = false,
+    view = "multiwindow",
     diagnostics = "nvim_lsp",
     diagnostics_update_in_insert = false,
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
       return "("..count..")"
     end,
     -- NOTE: this will be called a lot so don't do any heavy processing here
-    offsets = {{filetype = "NvimTree", text = "", padding = 1}},
+    offsets = { { filetype = "NvimTree", text = "", padding = 0 } },
     show_buffer_icons = true,
     show_buffer_close_icons = true,
     show_close_icon = true ,
@@ -59,33 +62,60 @@ require 'bufferline'.setup {
     -- can also be a table containing 2 custom separators
     -- [focused and unfocused]. eg: { '|', '|' }
     seperator_style = "thin",
-    },
+  },
+  highlights = {
     fill = {
-         guifg = "#767676",
-         guibg = "#212121",
-     },
+      guifg = "#767676",
+      guibg = "#212121",
+    },
     close_button_selected = {
-         guifg = "#ff8080",
-         guibg = "#212121",
-      },
+      guifg = "#ff8080",
+      guibg = "#1e1c31",
+    },
     tab_close = {
-         guifg = "#ff8080",
-         guibg = "#212121",
-      },
+      guifg = "#ff8080",
+      guibg = "#212121",
+    },
+    separator = {
+      guifg = "#161524",
+      guibg = "#161524",
+    },
+    separator_visible = {
+      guifg = "#161524",
+      guibg = "#161524",
+    },
+    separator_selected = {
+      guifg = "#161524",
+      guibg = "#161524",
+    },
+    diagnostic_selected = {
+      gui = "bold"
+    },
+    buffer_selected = {
+      gui = "bold"
+    },
+    error_selected = {
+      gui = "bold"
+    },
+    warning_selected = {
+      gui = "bold"
+    }
+  }
 }
 
 require 'indent_blankline'.setup {
-    show_end_of_line = true,
+  indentLine_enabled = 1,
+  char = "▏",
+  show_trailing_blankline_indent = false,
+  show_first_indent_level = false,
 }
-
-g["loaded_matchparen"] = 1
-g["mapleader"] = " "
-
 
 if fn.executable('rg') then
     g["rg_derive_root"] = 1
 end
 
+g["loaded_matchparen"] = 1
+g["mapleader"] = " "
 
 -- Load mappings
 require 'luastuff.mapping_setup'

@@ -5,8 +5,18 @@ end
 local luasnip = require 'luasnip'
 local config = require 'lspconfig'
 local cmp = require 'cmp'
+local nls = require 'null-ls'
 
 require('nvim-autopairs').setup{}
+
+-- set null-ls up for shellcheck
+local sources = {
+    nls.builtins.diagnostics.shellcheck.with({
+            diagnostics_format = "[#{c}] #{m} (#{s})"
+        })
+}
+
+nls.config({ sources = sources })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
@@ -20,8 +30,8 @@ local configs = {
     pylsp = default,
     gopls = default,
     rust_analyzer = default,
+    ["null-ls"] = default,
 }
-
 
 for server, opts in pairs(configs) do
    config[server].setup(opts)
@@ -46,19 +56,19 @@ cmp.setup({
             ['<C-p>'] = cmp.mapping.select_prev_item(),
             ['<C-Space>'] = cmp.mapping.complete(),
             ['<Tab>'] = function(fallback)
-                if vim.fn.pumvisible() == 1 then
-                    vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-n>', true, true, true), 'n')
+                if cmp.visible() then
+                    cmp.select_next_item()
                 elseif luasnip.expand_or_jumpable() then
-                    vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true), '')
+                    luasnip.expand_or_jump()
                 else
                     fallback()
                 end
             end,
             ['<S-Tab>'] = function(fallback)
-                if vim.fn.pumvisible() == 1 then
-                    vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<C-p>', true, true, true), 'n')
+                if cmp.visible() then
+                    cmp.select_prev_item()
                 elseif luasnip.jumpable(-1) then
-                    vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true), '')
+                    luasnip.jump(-1)
                 else
                     fallback()
                 end

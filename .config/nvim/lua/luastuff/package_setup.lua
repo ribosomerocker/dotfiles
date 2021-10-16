@@ -3,22 +3,33 @@ local cmd = vim.cmd
 require 'paq-nvim' {
     'savq/paq-nvim';
 
-    -- lsp completion
+    -- null lsp for setting up linters as language servers
+    'jose-elias-alvarez/null-ls.nvim';
+
     'neovim/nvim-lspconfig';
+
+    -- lsp completion
     'hrsh7th/nvim-cmp';
 
      -- cmp dependencies
     'hrsh7th/cmp-nvim-lsp';
     'hrsh7th/cmp-nvim-lua';
     'hrsh7th/cmp-buffer';
-
-    -- lspkind for cmp completion info
+    'saadparwaiz1/cmp_luasnip';
+    -- lspkind for cmp completion info for cmp
     'onsails/lspkind-nvim';
+
+    -- -- lsp completion v2 
+    -- -- fast af completion, ig?
+    -- { 'ms-jpg/coq_nvim', branch = 'coq' };
+    -- -- snippets
+    -- { 'ms-jpg/coq.artifacts', branch = 'artifacts' };
+    -- -- nvim lua and other sources e.g. math
+    -- { 'ms-jpg/coq.thirdparty', branch = '3p' };
 
     -- nvim-autopairs for automatic pair handling
     'windwp/nvim-autopairs';
     'L3MON4D3/LuaSnip';
-    'saadparwaiz1/cmp_luasnip';
 
    -- nice lookin' QOL stuff
    'akinsho/bufferline.nvim';

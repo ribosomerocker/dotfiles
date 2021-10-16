@@ -1,4 +1,5 @@
 local colors = require "luastuff.colors"
+local cmd = vim.cmd
 local lsp = require "feline.providers.lsp"
 
 local icon_styles = {
@@ -372,14 +373,14 @@ local InactiveStatusHL = {
    style = "underline",
 }
 
-components.inactive = {
-   {
-      {
-         provider = " ",
-         hl = InactiveStatusHL,
-      },
-   },
-}
+cmd(
+   string.format(
+      [[highlight StatusLineNC guifg=%s guibg=%s guisp=%s]], 
+      InactiveStatusHL.fg,
+      InactiveStatusHL.bg,
+      InactiveStatusHL.style
+   )
+)
 
 require("feline").setup {
    colors = {

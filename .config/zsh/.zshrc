@@ -62,6 +62,7 @@ export PATH="$PATH:$HOME/.local/bin:$HOME/.local/lib/go/bin:$XDG_DATA_HOME/opam/
 export XCOMPOSECACHE=$XDG_CACHE_HOME/X11/xcompose
 export XCOMPOSEFILE=$XDG_CONFIG_HOME/X11/xcompose
 export XINITRC=$XDG_CONFIG_HOME/X11/xinitrc
+export XCURSOR_SIZE=32
 
 export TERMINAL=alacritty
 export BROWSER=firefox
@@ -85,6 +86,7 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/jupyter"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export WINEPREFIX="$XDG_DATA_HOME/wine"
 export LS_COLORS="$(vivid generate molokai)"
+export GFORTHHIST="$XDG_DATA_HOME"
 
 export PF_INFO="ascii title host os de wm shell editor pkgs palette"
 export PF_COL2=2
@@ -95,7 +97,7 @@ export XKB_DEFAULT_MODEL=pc105
 export XKB_DEFAULT_LAYOUT=us,us,ar
 export XKB_DEFAULT_VARIANT=,colemak_dh,
 export XKB_DEFAULT_OPTIONS=grp:win_space_toggle,compose:sclk,shift:both_capslock,altwin:menu_win
-export FASD_DATA="$XDG_DATA_HOME/fasd"
+export _FASD_DATA="$XDG_DATA_HOME/fasd"
 export OPAMROOT="$XDG_DATA_HOME/opam"
 export CAML_LD_LIBRARY_PATH="$XDG_DATA_HOME/opam/4.12.0/lib/stublibs:/usr/lib/ocaml/stublibs:/usr/lib/ocaml"
 export OCAML_TOPLEVEL_PATH="$XDG_DATA_HOME/opam/4.12.0/lib/toplevel"
