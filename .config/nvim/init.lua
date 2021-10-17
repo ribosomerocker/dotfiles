@@ -24,12 +24,13 @@ require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
 -- file explorer tree 
 require'nvim-tree'.setup {
-    disable_netrw = true,
-    hijack_netrw = true,
-    view = {
-        width = 20,
-        side = 'left',
-    }
+  disable_netrw = true,
+  hijack_netrw = true,
+  view = {
+    width = 20,
+    hide_root_folder = true, 
+    side = 'left',
+  }
 }
 
 

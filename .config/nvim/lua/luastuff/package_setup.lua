@@ -34,8 +34,9 @@ require 'paq-nvim' {
    -- nice lookin' QOL stuff
    'akinsho/bufferline.nvim';
    'lukas-reineke/indent-blankline.nvim';
-   'famiu/feline.nvim';
-   'kyazdani42/nvim-tree.lua';
+   -- 'famiu/feline.nvim';
+   'windwp/windline.nvim';
+   'MonAaraj/nvim-tree.lua';
 
    -- tree sitter
    {'nvim-treesitter/nvim-treesitter', run = function() cmd[["TSUpdate"]] end};
