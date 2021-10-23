@@ -113,8 +113,6 @@ then
     SSH_ID="-i ${XDG_DATA_HOME}/ssh/id_ed25519"
 fi
 
-eval "$(ssh-agent)" 1>/dev/null
-
 eval "$(fasd --init auto)"
 
 alias ssh="ssh $SSH_CONFIG $SSH_ID"

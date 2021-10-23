@@ -34,8 +34,7 @@ require 'paq-nvim' {
    -- nice lookin' QOL stuff
    'akinsho/bufferline.nvim';
    'lukas-reineke/indent-blankline.nvim';
-   -- 'famiu/feline.nvim';
-   'windwp/windline.nvim';
+   'famiu/feline.nvim';
    'MonAaraj/nvim-tree.lua';
 
    -- tree sitter
