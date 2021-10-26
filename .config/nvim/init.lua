@@ -11,14 +11,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
   fn.system({'git', 'clone', '--depth=1', 'https://github.com/savq/paq-nvim.git', install_path})
 end
 
--- paq plugins
-require 'luastuff.package_setup'
-
--- load configs for lsp and statusline
-require 'luastuff.option_setup'
-require 'luastuff.colors'
-require 'luastuff.lsp'
-require 'luastuff.statusline'
+require 'pkgs'
+require 'opts'
+require 'colors'
+require 'lsp'
+require 'stln'
 
 require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
@@ -119,7 +116,7 @@ g["loaded_matchparen"] = 1
 g["mapleader"] = " "
 
 -- Load mappings
-require 'luastuff.mapping_setup'
+require 'maps'
 
 function trim_whitespace()
     local save = fn.winsaveview()

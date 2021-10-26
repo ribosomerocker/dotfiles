@@ -72,19 +72,19 @@ export ADB_KEYS_PATH=$XDG_DATA_HOME/android
 export CARGO_HOME=$XDG_DATA_HOME/cargo
 export GOPATH=$XDG_DATA_HOME/go
 
-export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0
-export LESSHISTFILE=$XDG_CACHE_HOME/less/history
-export LESSKEY=$XDG_CONFIG_HOME/less/lesskey
-export NLTK_DATA=$XDG_DATA_HOME/nltk_data
-export RUSTUP_HOME=$XDG_DATA_HOME/rustup/
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0
+export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
+export NLTK_DATA="$XDG_DATA_HOME"/nltk_data
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup/
 export SXHKD_SHELL=/usr/bin/bash
-export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat
-export XAUTHORITY=$XDG_RUNTIME_DIR/Xauthority
+export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"
-export PASSWORD_STORE_DIR="$XDG_DATA_HOME/pass"
-export IPYTHONDIR="$XDG_CONFIG_HOME/jupyter"
-export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
-export WINEPREFIX="$XDG_DATA_HOME/wine"
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/pass
+export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export WINEPREFIX="$XDG_DATA_HOME"/wine
 export LS_COLORS="$(vivid generate molokai)"
 export GFORTHHIST="$XDG_DATA_HOME"
 
@@ -103,6 +103,7 @@ export CAML_LD_LIBRARY_PATH="$XDG_DATA_HOME/opam/4.12.0/lib/stublibs:/usr/lib/oc
 export OCAML_TOPLEVEL_PATH="$XDG_DATA_HOME/opam/4.12.0/lib/toplevel"
 export MANPATH=":$XDG_DATA_HOME/opam/4.12.0/man:/home/mon/.opam/4.12.0/man"
 export INPUTRC="$XDG_CONFIG_HOME/inputrc"
+export RLWRAP_HOME="$XDG_DATA_HOME"/rlwrap
 
 if [ -s "${XDG_CONFIG_HOME}/ssh/config" ]
 then
