@@ -1,5 +1,3 @@
-local cmd = vim.cmd
-
 require 'paq-nvim' {
     'savq/paq-nvim';
 
@@ -17,7 +15,7 @@ require 'paq-nvim' {
     'hrsh7th/cmp-buffer';
     'saadparwaiz1/cmp_luasnip';
     -- lspkind for cmp completion info for cmp
-    'onsails/lspkind-nvim';
+    -- 'onsails/lspkind-nvim';
 
     -- -- lsp completion v2 
     -- -- fast af completion, ig?
@@ -34,17 +32,13 @@ require 'paq-nvim' {
    -- nice lookin' QOL stuff
    'akinsho/bufferline.nvim';
    'lukas-reineke/indent-blankline.nvim';
-   'famiu/feline.nvim';
-   'MonAaraj/nvim-tree.lua';
+   -- 'famiu/feline.nvim';
+   'kyazdani42/nvim-tree.lua';
 
    -- tree sitter
-   {'nvim-treesitter/nvim-treesitter', run = function() cmd[["TSUpdate"]] end};
+   {'nvim-treesitter/nvim-treesitter', run = function() vim.cmd[["TSUpdate"]] end};
 
    'mbbill/undotree';
-
-    -- git stuff
-    'tpope/vim-fugitive';
-    'junegunn/gv.vim';
 
     -- telescope dependencies
     'nvim-lua/popup.nvim';

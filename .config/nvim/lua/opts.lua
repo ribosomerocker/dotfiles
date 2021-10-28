@@ -24,6 +24,7 @@ opt.clipboard:append     "unnamedplus"
 opt.signcolumn           =  "yes"
 opt.termguicolors        =  true
 opt.completeopt          = {"menuone", "noselect"}
+opt.laststatus           = 0
 
 -- message height
 opt.cmdheight            =  1

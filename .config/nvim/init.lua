@@ -15,7 +15,6 @@ require 'pkgs'
 require 'opts'
 require 'colors'
 require 'lsp'
-require 'stln'
 
 require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
@@ -29,7 +28,6 @@ require'nvim-tree'.setup {
     side = 'left',
   }
 }
-
 
 -- Bufferline, feline and indent_blankline setup here
 require 'bufferline'.setup {
