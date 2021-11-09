@@ -3,8 +3,8 @@ local map = vim.api.nvim_set_keymap
 -- Bufferline maps
 -- These commands will navigate through buffers in order regardless of which mode you are using
 -- e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
-map('n', 'ml',           ':BufferLineCycleNext<CR>',                      { noremap = true, silent = true })
-map('n', 'mh',           ':BufferLineCyclePrev<CR>',                      { noremap = true, silent = true })
+map('n', 'ml',           ':bn<CR>',                                       { noremap = true, silent = true })
+map('n', 'mh',           ':bp<CR>',                                       { noremap = true, silent = true })
 map('n', 'Ml',           ':BufferLineMoveNext<CR>',                       { noremap = true, silent = true })
 map('n', 'Mh',           ':BufferLineMovePrev<CR>',                       { noremap = true, silent = true })
 map('n', 'md',           ':Bdelete!<CR>',                                 { noremap = true, silent = true })
