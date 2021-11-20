@@ -42,7 +42,6 @@ require 'bufferline'.setup {
     max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
     tab_size = 20,
     enforce_regular_tabs = false,
-    view = "multiwindow",
     diagnostics = "nvim_lsp",
     diagnostics_update_in_insert = false,
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
@@ -81,8 +80,8 @@ require 'bufferline'.setup {
       guibg = "#161524",
     },
     separator_selected = {
-      guifg = "#161524",
-      guibg = "#161524",
+      guifg = "#f800fc",
+      guibg = "#f800fc",
     },
     diagnostic_selected = {
       gui = "bold"
