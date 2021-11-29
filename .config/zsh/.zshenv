@@ -6,7 +6,8 @@ export XDG_CONFIG_DIRS=/etc/xdg
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_DATA_HOME=$HOME/.local/share
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/lib/go/bin:$XDG_DATA_HOME/opam/4.12.0/bin"
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/lib/go/bin:$XDG_DATA_HOME/opam/4.12.0/bin:$GEM_HOME/bin"
 
 export XCOMPOSECACHE=$XDG_CACHE_HOME/X11/xcompose
 export XCOMPOSEFILE=$XDG_CONFIG_HOME/X11/xcompose

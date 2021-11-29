@@ -14,20 +14,15 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
-
-;; (setq scroll-preserve-screen-position 1
-;;       scroll-step 1
-;;       scroll-up-aggressively 0.01
-;;       scroll-down-aggressively 0.01
-;;       scroll-conservatively 10000
-;;       scroll-margin 8)
-
+(setq display-line-numbers-width-start t
+      scroll-step 1
+      scroll-margin 8)
 (tool-bar-mode -1)
 (set-cursor-color "#ffffff")
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (global-hl-line-mode -1)
-(line-number-mode 1)
+(display-line-numbers-mode 1)
 (global-display-line-numbers-mode 1)
 
 (custom-set-variables
@@ -39,7 +34,7 @@
    [default default default italic underline success warning error])
  '(custom-enabled-themes '(misterioso))
  '(package-selected-packages
-   '(company slime telephone-line smooth-scrolling smooth-scroll auto-package-update sublimity undo-fu evil goto-chg)))
+   '(company slime telephone-line auto-package-update sublimity undo-fu evil goto-chg)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -49,8 +44,8 @@
 
 (use-package auto-package-update
              :config
-             (setq auto-package-update-delete-old-versions t)
-             (setq auto-package-update-hide-results t)
+             (setq auto-package-update-delete-old-versions t
+                   auto-package-update-hide-results t)
              (auto-package-update-maybe))
 
 (use-package undo-fu)
@@ -62,12 +57,6 @@
              (define-key evil-insert-state-map (kbd "C-c C-c") 'evil-normal-state)
              (define-key evil-normal-state-map (kbd "C-c C-c") 'evil-normal-state))
 
-(use-package smooth-scrolling
-             :config
-             (require 'smooth-scrolling)
-             (smooth-scrolling-mode 1)
-             (setq smooth-scrolling-margin 8))
-
 (use-package telephone-line
   :config
   (setq telephone-line-lhs
@@ -76,8 +65,8 @@
 		     telephone-line-erc-modified-channels-segment
 		     telephone-line-process-segment))
 	  (nil    . (telephone-line-minor-mode-segment
-		     telephone-line-buffer-segment))))
-  (setq telephone-line-rhs
+		     telephone-line-buffer-segment)))
+        telephone-line-rhs
 	'((nil    . (telephone-line-misc-info-segment))
 	  (accent . (telephone-line-major-mode-segment))
 	  (evil   . (telephone-line-airline-position-segment))))

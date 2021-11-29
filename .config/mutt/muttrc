@@ -1,0 +1,101 @@
+#
+# Starter neomuttrc file, with just a few suggestions and settings.
+#
+# This file purposely doesn't include hooks, keybinding, macros, colors, etc.
+# Read the manual, explore, and have fun!
+#
+
+###############
+# Identity
+#
+set realname = "Mon Aaraj"
+#
+## If you have another address:
+#alternates "^neomutt@example\.com$"
+#
+## Or, if you use the entire domain:
+#alternates "@example\.com$"
+set reverse_name
+
+##############
+# General
+#
+set date_format="%Y/%m/%d %r"
+set include=no 
+set pager_index_lines=8
+set sleep_time=0
+set imap_check_subscribed
+
+# Message headers
+ignore * 
+unignore from: date subject to cc 
+unignore x-mailer:
+unignore x-mailing-list: posted-to:
+hdr_order From To Cc Date 
+
+# Messages
+alternative_order text/plain text/html
+auto_view text/html
+set auto_tag=yes
+set editor='nvim'
+set mail_check=30
+set mail_check_stats
+set mark_old=no 
+set menu_scroll
+set message_cachedir=~/.local/cache/mutt/messages
+set move=no
+set query_command="khard email --parsable &s"
+set text_flowed=yes
+set reflow_text=yes
+set reflow_wrap=72
+set timeout=30
+
+# Sidebar
+set sidebar_divider_char='|'
+set sidebar_folder_indent=yes
+set sidebar_format = '%B%?F? [%F]?%* %?N?%N/?%S'
+set sidebar_short_path=yes
+set sidebar_sort_method='unsorted'
+set sidebar_visible=yes
+set sidebar_width=20
+set sort=threads
+set sort_aux=reverse-last-date-received
+set sort_browser=date
+
+# disroot 
+set imap_user = "mon.aaraj@disroot.org"
+
+# To avoid storing your password in the .neomuttrc:
+# echo -n "$(read -s;echo -n "$REPLY")" | gpg --encrypt -r 0x1234567890ABCDEF > ~/.neomutt/account.gpg
+# Previous command won't work in some shells. You can use the following:
+# echo -n 'mypassword' | gpg --encrypt -r 0x1234567890ABCDEF > ~/.neomutt/account.gpg
+# !!! But be warned your password will be saved to shell history.
+set imap_pass = "`gpg --batch -q --decrypt ~/.local/share/neomutt/account.gpg`"
+
+set folder = imaps://"$imap_user"/
+set spoolfile = "+INBOX"
+set postponed = +Drafts 
+set record = +Sent
+set mbox = +Archive
+set from = $imap_user
+set smtp_url = smtp://"$imap_user":587
+set ssl_starttls
+
+mailboxes =Inbox 
+account-hook $folder "set imap_user=mon.aaraj@disroot.org"
+color status red default 
+
+set header_cache= "~/.local/cache/neomutt/hcache"
+
+# msmtp is a solid SMTP client.
+# neomutt also has built-in SMTP, or you can use an MTA like exim4 or postfix.
+set sendmail = "/usr/bin/msmtp"
+
+###############
+# GnuPG
+#
+unset crypt_use_gpgme
+source /usr/share/doc/mutt/samples/gpg.rc
+set pgp_default_key = "0x9A87618CA9316B83BAE22FF52EA93950063CB61F"
+set crypt_opportunistic_encrypt
+set postpone_encrypt

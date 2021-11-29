@@ -53,4 +53,5 @@ require 'paq-nvim' {
     'famiu/bufdelete.nvim';
     'tpope/vim-dispatch';
     'machakann/vim-sandwich';
+    'Konfekt/vim-compilers';
 }
