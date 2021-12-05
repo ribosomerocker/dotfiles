@@ -20,11 +20,12 @@ set reverse_name
 ##############
 # General
 #
-set date_format="%Y/%m/%d %r"
 set include=no 
 set pager_index_lines=8
 set sleep_time=0
 set imap_check_subscribed
+set ssl_starttls = yes
+set ssl_force_tls = yes
 
 # Message headers
 ignore * 
@@ -62,29 +63,6 @@ set sort=threads
 set sort_aux=reverse-last-date-received
 set sort_browser=date
 
-# disroot 
-set imap_user = "mon.aaraj@disroot.org"
-
-# To avoid storing your password in the .neomuttrc:
-# echo -n "$(read -s;echo -n "$REPLY")" | gpg --encrypt -r 0x1234567890ABCDEF > ~/.neomutt/account.gpg
-# Previous command won't work in some shells. You can use the following:
-# echo -n 'mypassword' | gpg --encrypt -r 0x1234567890ABCDEF > ~/.neomutt/account.gpg
-# !!! But be warned your password will be saved to shell history.
-set imap_pass = "`gpg --batch -q --decrypt ~/.local/share/neomutt/account.gpg`"
-
-set folder = imaps://"$imap_user"/
-set spoolfile = "+INBOX"
-set postponed = +Drafts 
-set record = +Sent
-set mbox = +Archive
-set from = $imap_user
-set smtp_url = smtp://"$imap_user":587
-set ssl_starttls
-
-mailboxes =Inbox 
-account-hook $folder "set imap_user=mon.aaraj@disroot.org"
-color status red default 
-
 set header_cache= "~/.local/cache/neomutt/hcache"
 
 # msmtp is a solid SMTP client.
@@ -99,3 +77,7 @@ source /usr/share/doc/mutt/samples/gpg.rc
 set pgp_default_key = "0x9A87618CA9316B83BAE22FF52EA93950063CB61F"
 set crypt_opportunistic_encrypt
 set postpone_encrypt
+
+# Accounts. The last will be the one mutt goes into by default. 
+source ~/.config/mutt/mon.aaraj@disroot
+folder-hook $folder 'source ~/.config/mutt/mon.aaraj@disroot'

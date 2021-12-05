@@ -16,7 +16,7 @@ map('n', '<leader><CR>', ':luafile ~/.config/nvim/init.lua<CR>',          { nore
 map('n', '<leader>+',    ':vertical resize +5<CR>',                       { noremap = true, silent = true })
 map('n', '<leader>-',    ':vertical resize -5<CR>',                       { noremap = true, silent = true  })
 map('v', 'J',            ':m \'>+1<CR>gv=gv',                             { noremap = true, silent = true  })
-map('v', 'K',            ':m \'>-2<CR>gv=gv',                             { noremap = true, silent = true })
+map('v', 'K',            ':m \'<-2<CR>gv=gv',                             { noremap = true, silent = true })
 map('v', '<leader>p',    '"_dP',                                          { noremap = true })
 map('n', '<leader>y',    '"+y',                                           { noremap = true })
 map('v', '<leader>y',    '"+y',                                           { noremap = true })

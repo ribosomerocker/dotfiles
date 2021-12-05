@@ -7,14 +7,14 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_DATA_HOME=$HOME/.local/share
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/lib/go/bin:$XDG_DATA_HOME/opam/4.12.0/bin:$GEM_HOME/bin"
+export PATH="$HOME/.local/bin:$HOME/.local/lib/go/bin:$PATH"
 
 export XCOMPOSECACHE=$XDG_CACHE_HOME/X11/xcompose
 export XCOMPOSEFILE=$XDG_CONFIG_HOME/X11/xcompose
 export XINITRC=$XDG_CONFIG_HOME/X11/xinitrc
 export XCURSOR_SIZE=32
 
-export TERMINAL=alacritty
+export TERMINAL=st
 export BROWSER=firefox
 export EDITOR=nvim
 export GNUPGHOME=$XDG_DATA_HOME/gnupg
@@ -27,7 +27,7 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
 export NLTK_DATA="$XDG_DATA_HOME"/nltk_data
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup/
-export SXHKD_SHELL=/usr/bin/bash
+export SXHKD_SHELL=/usr/bin/zsh
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 export JULIA_DEPOT_PATH="$XDG_DATA_HOME/julia:$JULIA_DEPOT_PATH"

@@ -24,7 +24,7 @@ require'nvim-tree'.setup {
   hijack_netrw = true,
   view = {
     width = 20,
-    hide_root_folder = true, 
+    hide_root_folder = false, 
     side = 'left',
   }
 }
