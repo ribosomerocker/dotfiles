@@ -1,6 +1,6 @@
 HISTSIZE=1000
 SAVEHIST=1000
-setopt autocd extendedglob promptsubst GLOB_DOTS
+setopt autocd extendedglob promptsubst GLOB_DOTS interactivecomments
 
 autoload -Uz compinit
 compinit

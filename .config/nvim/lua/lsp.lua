@@ -1,5 +1,4 @@
 local function on_attach()
-    -- me neither tbh. I guess I should TODO this. There.
 end
 
 local luasnip = require 'luasnip'
@@ -8,6 +7,7 @@ local cmp = require 'cmp'
 local nls = require 'null-ls'
 
 require('nvim-autopairs').setup{}
+local cmp_ap = require('nvim-autopairs.completion.cmp')
 
 -- set null-ls up for shellcheck
 local sources = {
@@ -77,8 +77,10 @@ cmp.setup({
         sources = {
             { name = 'nvim_lsp' },
             { name = 'nvim_lua' },
+            { name = 'path' },
+            { name = 'nvim_lsp_signature_help' },
             { name = 'luasnip' },
-            { name = 'buffer' },
+            { name = 'treesitter' },
         },
         formatting = {
             format = function(entry, vim_item)
@@ -96,6 +98,8 @@ cmp.setup({
             end,
         },
     })
+
+cmp.event:on( 'confirm_done', cmp_ap.on_confirm_done({ map_char = { tex = '' } }))
 
 -- luasnip config
 vim.api.nvim_set_keymap("i", "<C-n>", "<Plug>luasnip-next-choice", {})

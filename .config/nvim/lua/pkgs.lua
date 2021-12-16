@@ -1,4 +1,4 @@
-require 'paq-nvim' {
+require 'paq' {
     'savq/paq-nvim';
 
     -- null lsp for setting up linters as language servers
@@ -12,7 +12,9 @@ require 'paq-nvim' {
      -- cmp dependencies
     'hrsh7th/cmp-nvim-lsp';
     'hrsh7th/cmp-nvim-lua';
-    'hrsh7th/cmp-buffer';
+    'ray-x/cmp-treesitter';
+    'hrsh7th/cmp-path';
+    'hrsh7th/cmp-nvim-lsp-signature-help';
     'saadparwaiz1/cmp_luasnip';
     -- lspkind for cmp completion info for cmp
     -- 'onsails/lspkind-nvim';
@@ -28,6 +30,7 @@ require 'paq-nvim' {
     -- nvim-autopairs for automatic pair handling
     'windwp/nvim-autopairs';
     'L3MON4D3/LuaSnip';
+    -- 'rafamadriz/friendly-snippets';
 
    -- nice lookin' QOL stuff
    'akinsho/bufferline.nvim';

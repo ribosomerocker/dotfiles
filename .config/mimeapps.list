@@ -12,6 +12,9 @@ application/x-extension-xht=firefox.desktop
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/discord-610508934456934412=discord-610508934456934412.desktop
 x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-VH2ND1.desktop
+message/rfc822=userapp-Thunderbird-VH2ND1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-VH2ND1.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;
@@ -26,3 +29,5 @@ application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 image/jpeg=sxiv.desktop;
 image/gif=geeqie.desktop;sxiv.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-VH2ND1.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-VH2ND1.desktop;
