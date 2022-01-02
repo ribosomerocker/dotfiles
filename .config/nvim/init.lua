@@ -16,7 +16,18 @@ require 'opts'
 require 'colors'
 require 'lsp'
 
-require 'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+require 'nvim-treesitter.configs'.setup(
+  { 
+    highlight = { 
+      enable = true 
+    }, 
+    rainbow = { 
+      enable = true, 
+      extended_mode = true, 
+      max_file_lines = nil
+    } 
+  }
+)
 
 -- nvim autopair stuff 
 local npairs = require'nvim-autopairs'

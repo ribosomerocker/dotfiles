@@ -16,7 +16,8 @@
 
 (setq display-line-numbers-width-start t
       scroll-step 1
-      scroll-margin 8)
+      scroll-margin 8
+      scroll-conservatively 10000)
 (tool-bar-mode -1)
 (set-cursor-color "#ffffff")
 (menu-bar-mode -1)
@@ -48,7 +49,8 @@
              (evil-mode 1)
              (evil-set-undo-system 'undo-fu)
              (define-key evil-insert-state-map (kbd "C-c C-c") 'evil-normal-state)
-             (define-key evil-normal-state-map (kbd "C-c C-c") 'evil-normal-state))
+             (define-key evil-normal-state-map (kbd "C-c C-c") 'evil-normal-state)
+	     (setq evil-want-C-u-scroll t)
 
 (use-package telephone-line
   :config
@@ -146,3 +148,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(use-package smartparens
+  :hook (prog-mode . smartparens-strict-mode)
+  :config
+  (require 'smartparens-config))

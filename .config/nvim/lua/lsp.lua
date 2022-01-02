@@ -16,7 +16,7 @@ local sources = {
         })
 }
 
-nls.config({ sources = sources })
+nls.setup({ sources = sources })
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
@@ -30,7 +30,6 @@ local configs = {
     pylsp = default,
     gopls = default,
     rust_analyzer = default,
-    ["null-ls"] = default,
 }
 
 for server, opts in pairs(configs) do

@@ -40,6 +40,9 @@ require 'paq' {
 
    -- tree sitter
    {'nvim-treesitter/nvim-treesitter', run = function() vim.cmd[["TSUpdate"]] end};
+   {'eraserhd/parinfer-rust', run = 'cargo build --release'};
+   'wlangstroth/vim-racket';
+   'p00f/nvim-ts-rainbow';
 
    'mbbill/undotree';
 
@@ -53,6 +56,7 @@ require 'paq' {
     -- colors
     'sheerun/vim-polyglot';
     {'challenger-deep-theme/vim', as = 'challenger-deep'};
+    'chriskempson/base16-vim';
     'famiu/bufdelete.nvim';
     'tpope/vim-dispatch';
     'machakann/vim-sandwich';
