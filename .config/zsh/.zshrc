@@ -75,11 +75,12 @@ alias la="exa --icons -ah"
 alias ll="exa --icons -alh"
 alias config='/usr/bin/git -C $HOME/Git/dotfiles/'
 alias stowdf='stow -vd $HOME/Git dotfiles'
-alias scheme="scheme --eehistory $XDG_CACHE_HOME/chez"
+alias chez="chez --eehistory $XDG_CACHE_HOME/chez"
 alias petite="petite --eehistory $XDG_CACHE_HOME/chez"
 alias cat="bat"
 alias e='f -e $EDITOR'
 alias ea='f -e editas'
+alias j='fasd_cd -d'
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh

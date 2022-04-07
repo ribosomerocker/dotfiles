@@ -15,6 +15,7 @@ x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-VH2ND1.desktop
 message/rfc822=userapp-Thunderbird-VH2ND1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-VH2ND1.desktop
+inode/directory=polo-gtk.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;
@@ -31,3 +32,4 @@ image/jpeg=sxiv.desktop;
 image/gif=geeqie.desktop;sxiv.desktop;
 x-scheme-handler/mailto=userapp-Thunderbird-VH2ND1.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-VH2ND1.desktop;
+application/octet-stream=imv.desktop;

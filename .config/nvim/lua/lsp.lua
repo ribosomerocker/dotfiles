@@ -13,7 +13,7 @@ local cmp_ap = require('nvim-autopairs.completion.cmp')
 local sources = {
     nls.builtins.diagnostics.shellcheck.with({
             diagnostics_format = "[#{c}] #{m} (#{s})"
-        })
+        }),
 }
 
 nls.setup({ sources = sources })
@@ -30,6 +30,7 @@ local configs = {
     pylsp = default,
     gopls = default,
     rust_analyzer = default,
+    hls = default,
 }
 
 for server, opts in pairs(configs) do

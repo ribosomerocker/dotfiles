@@ -41,14 +41,9 @@ map('n', '<leader>vrr',  ':lua vim.lsp.buf.references()<CR>',             { nore
 map('n', '<leader>vrn',  ':lua vim.lsp.buf.rename()<CR>',                 { noremap = true, silent = true })
 map('n', '<leader>vh',   ':lua vim.lsp.buf.hover()<CR>',                  { noremap = true, silent = true })
 map('n', '<leader>vca',  ':lua vim.lsp.buf.code_action()<CR>',            { noremap = true, silent = true })
-map('n', '<leader>vn',   ':lua vim.lsp.diagnostic.goto_next()<CR>',       { noremap = true, silent = true })
-map('n', '<leader>vf',   ':lua vim.lsp.diagnostic.set_loclist()<CR>',     { noremap = true, silent = true })
-map(
-    'n', 
-    '<leader>vsd',  
-    ':lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.diagnostic.show_line_diagnostics()<CR>',
-    { noremap = true, silent = true }
-)
+map('n', '<leader>vn',   ':lua vim.diagnostic.goto_next()<CR>',           { noremap = true, silent = true })
+map('n', '<leader>vf',   ':lua vim.diagnostic.setloclist()<CR>',          { noremap = true, silent = true })
+map('n', '<leader>vsd',  ':lua vim.diagnostic.open_float()<CR>',         { noremap = true, silent = true })
 
 function search_dotfiles()
     require("telescope.builtin").find_files({

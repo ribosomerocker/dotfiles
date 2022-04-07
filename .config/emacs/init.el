@@ -1,7 +1,7 @@
 ;; Set up package.el to work with MELPA
 (require 'package)
 (add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+             '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 (package-refresh-contents)
 
@@ -18,6 +18,7 @@
       scroll-step 1
       scroll-margin 8
       scroll-conservatively 10000)
+
 (tool-bar-mode -1)
 (set-cursor-color "#ffffff")
 (menu-bar-mode -1)
@@ -26,31 +27,30 @@
 (display-line-numbers-mode 1)
 (global-display-line-numbers-mode 1)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(custom-enabled-themes '(misterioso))
- '(nil nil t))
-
 (use-package auto-package-update
              :config
              (setq auto-package-update-delete-old-versions t
                    auto-package-update-hide-results t)
              (auto-package-update-maybe))
 
+(use-package gruber-darker-theme
+  :ensure t
+  :config
+  (load-theme 'gruber-darker t))
+
 (use-package undo-fu)
 
 (use-package evil
+	     :ensure t
+	     :init
+	     (setq evil-want-C-u-scroll t
+		   evil-want-minibuffer t)
              :config
-             (evil-mode 1)
              (evil-set-undo-system 'undo-fu)
              (define-key evil-insert-state-map (kbd "C-c C-c") 'evil-normal-state)
              (define-key evil-normal-state-map (kbd "C-c C-c") 'evil-normal-state)
-	     (setq evil-want-C-u-scroll t)
+             (evil-mode 1))
+
 
 (use-package telephone-line
   :config
@@ -80,13 +80,13 @@
   ;; (setq vertico-scroll-margin 0)
 
   ;; Show more candidates
-  ;; (setq vertico-count 20)
+  (setq vertico-count 20)
 
   ;; Grow and shrink the Vertico minibuffer
   ;; (setq vertico-resize t)
 
   ;; Optionally enable cycling for `vertico-next' and `vertico-previous'.
-  ;; (setq vertico-cycle t)
+  (setq vertico-cycle t)
   )
 
 ;; Optionally use the `orderless' completion style. See
@@ -142,12 +142,6 @@
 (use-package company
   :config
   (add-hook 'after-init-hook 'global-company-mode))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 (use-package smartparens
   :hook (prog-mode . smartparens-strict-mode)
