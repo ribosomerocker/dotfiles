@@ -2,6 +2,10 @@ Host gitlab.gnome.org
     PreferredAuthentications publickey
     IdentityFile ~/.local/share/ssh/gnome_gitlab_disroot_id_ed25519
 
+Host *sr.ht
+    IdentityFile ~/.local/share/ssh/srht_id_rsa
+    PreferredAuthentications publickey
+
 Host *
     IdentityFile ~/.local/share/ssh/id_ed25519
     AddKeysToAgent yes

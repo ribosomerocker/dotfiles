@@ -1,8 +1,11 @@
 local fn = vim.fn
-local cmd = vim.cmd
 local g = vim.g
 local opt = vim.opt
 local api = vim.api
+local create_augroup = api.nvim_create_augroup
+local create_autocmd = api.nvim_create_autocmd
+local add_ext = vim.filetype.add
+local create_cmd = api.nvim_create_user_command
 
 local install_path = fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
 
@@ -16,6 +19,8 @@ require 'opts'
 require 'colors'
 require 'lsp'
 
+
+require 'idris2'.setup({})
 require 'nvim-treesitter.configs'.setup(
   { 
     highlight = { 
@@ -28,6 +33,10 @@ require 'nvim-treesitter.configs'.setup(
     } 
   }
 )
+
+require 'nu'.setup({
+    complete_cmd_names = true, -- requires https://github.com/jose-elias-alvarez/null-ls.nvim  
+})
 
 -- nvim autopair stuff 
 local npairs = require'nvim-autopairs'
@@ -163,22 +172,21 @@ function trim_whitespace()
 end
 
 -- QoL commands
-cmd[[com! W w]]
-cmd[[com! Wq wq]]
-cmd[[com! WQ wq]]
-cmd[[com! Q q]]
+create_cmd('W',  'w',  {})
+create_cmd('Wq', 'wq', {})
+create_cmd('WQ', 'wq', {})
+create_cmd('Q',  'q',  {})
 
 -- highlights yanked area, i love this
-cmd [[augroup highlight_yank]]
-cmd [[autocmd!]]
-cmd [[autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})]]
-cmd [[augroup END]]
+create_autocmd("TextYankPost", {
+    group = create_augroup("highlight_yank", { clear =  true }),
+    pattern = "*",
+    callback = function() require'vim.highlight'.on_yank({timeout = 30}) end,
+})
 
 -- trim whitespace
-cmd [[augroup SET_STUFF_UP]]
-cmd [[    autocmd!]]
-cmd [[    autocmd BufWritePre * :lua trim_whitespace()]]
-cmd [[augroup END]]
-
--- for some reason syntax is weird when you open a .asm file, so i set syntax to nasm
-cmd [[au BufReadPost *.asm set syntax=nasm]]
+create_autocmd("BufWritePre", {
+    group = create_augroup("trim_whitespace", { clear =  true }),
+    pattern = "*",
+    callback = trim_whitespace,
+})

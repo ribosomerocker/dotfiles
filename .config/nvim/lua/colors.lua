@@ -1,4 +1,5 @@
 local cmd = vim.cmd
+local set_hl = vim.api.nvim_set_hl
 
 -- table of colors; useful for satusline
 -- local _M = {
@@ -36,10 +37,23 @@ local cmd = vim.cmd
 -- }
 
 -- do some color-related stuff
+-- TODO: use lua for this via the 0.7 api
 cmd[[colorscheme            challenger_deep]]
 cmd[[highlight EndOfBuffer  ctermfg=grey guifg=#353b52]]
 cmd[[highlight Linenr       guibg=000000]]
 cmd[[highlight StatusLine   guibg=#110142]]
 cmd[[highlight StatusLineNc guibg=#110142]]
+
+
+-- Idris highlighting
+cmd [[highlight link LspSemantic_type       Include   ]] -- Use the same highlight as the Include group
+cmd [[highlight link LspSemantic_function   Identifier]] -- Functions names
+cmd [[highlight link LspSemantic_enumMember Number    ]]   -- Data constructors
+cmd [[highlight      LspSemantic_variable   guifg=gray]] -- Bound variables
+cmd [[highlight link LspSemantic_keyword    Structure ]]  -- Keywords
+cmd [[highlight link LspSemantic_namespace  Identifier]] -- Explicit namespaces
+cmd [[highlight link LspSemantic_postulate  Define    ]] -- Postulates
+cmd [[highlight link LspSemantic_module     Identifier]] -- Module identifiers
+
 
 -- return _M

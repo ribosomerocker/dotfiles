@@ -5,6 +5,9 @@ setopt autocd extendedglob promptsubst GLOB_DOTS interactivecomments
 autoload -Uz compinit
 compinit
 
+autoload -Uz bashcompinit
+bashcompinit
+
 # Include hidden files
 zmodload zsh/complist
 # Menu selections
@@ -56,6 +59,7 @@ then
 fi
 
 eval "$(fasd --init auto)"
+eval "$(pack completion-script pack)"
 
 alias ssh="ssh $SSH_CONFIG $SSH_ID"
 alias ssh-copy-id="ssh-copy-id $SSH_ID"

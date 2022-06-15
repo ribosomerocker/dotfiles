@@ -7,7 +7,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_DIRS=/usr/local/share:/usr/share
 export XDG_DATA_HOME=$HOME/.local/share
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$HOME/.local/bin:$HOME/.local/share/go/bin:$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/.local/share/pack/bin:$HOME/.local/bin:$HOME/.local/share/go/bin:$HOME/.config/emacs/bin:$PATH"
 
 export XCOMPOSECACHE=$XDG_CACHE_HOME/X11/xcompose
 export XCOMPOSEFILE=$XDG_CONFIG_HOME/X11/xcompose
@@ -29,6 +29,8 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
 export NLTK_DATA="$XDG_DATA_HOME"/nltk_data
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup/
+export ELAN_HOME="$XDG_DATA_HOME"/elan/
+export PACK_DIR="$XDG_DATA_HOME"/pack
 export SXHKD_SHELL=/usr/bin/zsh
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 export ROSWELL_HOME="$XDG_DATA_HOME"/roswell
