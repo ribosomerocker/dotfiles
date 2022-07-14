@@ -1,3 +1,9 @@
+# WARNING! THIS REPOSITORY HAS BEEN ABANDONED
+I don't like GitHub anymore, so I have moved to sourcehut. My GitHub account will still be active, but do not expect me to create repositories here.
+https://git.sr.ht/~monaaraj/dotfiles
+
+
+
 # Credits
 
 Credits to Soviet Kitsune#3870 on Discord for massively helping me with my Neovim Lua configuration.
